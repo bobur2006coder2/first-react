@@ -47,7 +47,7 @@ export default function Footer() {
 
           <input type="text" className="border border-solid p-3 border-gray-500 rounded-lg text-white outline-none bg-transparent" placeholder='Enter Your Email' required />
                    <br />
-                   <br />
+                   <br /> 
                     <button className="bg-yellow-500 pt-2 pb-2 pr-7 pl-7 text-white rounded-md  capitalize">
                     subscribe
                     </button>
