@@ -39,10 +39,10 @@ export default function Footer() {
                     </>
 
                     <>
-                    <ul className="capitalize">
-                        <li className="text-white font-bold">
+                    <form className="capitalize">
+                        <h5 className="text-white font-bold">
                         news latter
-                        </li>
+                        </h5>
                         <br />
 
           <input type="text" className="border border-solid p-3 border-gray-500 rounded-lg text-white outline-none bg-transparent" placeholder='Enter Your Email' required />
@@ -51,7 +51,7 @@ export default function Footer() {
                     <button className="bg-yellow-500 pt-2 pb-2 pr-7 pl-7 text-white rounded-md  capitalize">
                     subscribe
                     </button>
-                    </ul>
+                    </form>
                     
                     </>
 
