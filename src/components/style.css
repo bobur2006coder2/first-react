@@ -8,3 +8,14 @@
     background-repeat: no-repeat ;
     background-size: 100%;
 }
+
+.main-right{
+    background-image: url(./img/main-bg.png);
+    background-size: 100%;
+}
+
+footer{
+    background-image: url(./img/ftbg.png);
+}
+
+
