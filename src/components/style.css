@@ -1,17 +1,8 @@
-.ye{
-    margin: 0 auto;
-
-}
-
-.hell{
-    background-image: url(./img/background\ image.png);
-    background-repeat: no-repeat ;
-    background-size: 100%;
-}
 
 .main-right{
     background-image: url(./img/main-bg.png);
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 footer{

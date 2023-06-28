@@ -1,32 +1,100 @@
-import React from 'react'
-import schoolbagOne from "./img/bagOne.png"
-import schoolbagTwo from "./img/bagTwo.png"
-import schoolbagThree from "./img/bagThree.png"
-import schoolbagFour from "./img/bagFour.png"
-export const Navbar = () => {
-  return (
-  <nav >
-    <div className="w-[1140px] ye">
-    <ul className="flex justify-between gap-2 pt-10">
-        <li className="text-stone-900 capitalize">water resistant</li>
-        <li className="text-black capitalize font-bold">charging system</li>
-        <li className="text-stone-900 capitalize">artificial leather</li>
-        <li className="text-state-800 capitalize">modern clothes</li>
-    </ul>
+import React, { useState } from 'react'
+import "./style.css"
+import bag from "./img/logo.png"
+import twoStyle from "./img/image heading.png"
+import discount from "./img/discount.png"
+import girl from "./img/girl.png"
+import { navbar } from '../utils/Constants'
 
-    <ul className="flex justify-between  pt-5">
-        <li className="text-stone-900 capitalize"></li>
-        <li className="text-black capitalize font-bold border-2 border-solid border-yellow-500 w-[160px] h-[0px]"></li>
-        <li className="text-stone-900 capitalize"></li>
-        <li className="text-state-800 capitalize w-[25px]"></li>
-    </ul>
-    <ul className="flex justify-between gap-2 pt-10">
-        <li className="text-stone-900 capitalize"><img src={schoolbagOne} alt="" /></li>
-        <li className="text-black capitalize font-bold"><img src={schoolbagTwo} alt="" /></li>
-        <li className="text-stone-900 capitalize"><img src={schoolbagThree} alt="" /></li>
-        <li className="text-state-800 capitalize"><img src={schoolbagFour} alt="" /></li>
-    </ul>
-    </div>
-  </nav>
-  )
+export default function Navbar() {
+    const [name, setName] = useState(false)
+    const headerNav = () => {
+        setName(e => !e)
+    }
+    return (
+        <header className='bg-stone-800 '>
+
+            {/* navbar start */}
+
+
+            <div className=" mx-auto max-w-screen-xl pt-4 pb-2 ">
+                <div className="flex justify-between items-center">
+
+                    <img src={bag} alt="" />
+
+                    <ul className="hidden md:flex  gap-10 items-center  ">
+                        {navbar.map((val, index) => {
+                            return (
+                                <div key={index} className="flex items-center">
+
+                                    <li className={val.style}>{val.name}</li>
+                                        <button className={val.btnstyle}>
+                                           {val.btnname}
+                                        </button>
+                                </div>
+                            )
+                        })}
+                    </ul>
+                    <button className='capitalize bg-yellow-500 pl-4 pr-4 pt-2 pb-2 text-white rounded-md  md:hidden' onClick={headerNav}>
+                        shop now
+                    </button>
+                    {
+                        name && <div className='block md:hidden w-full bg-white flex-wrap'>
+
+                            <ul>
+                            {navbar.map((val, index) => {
+                            return (
+                                <div key={index} className="flex items-center">
+
+                                    <li className={val.style}>{val.name}</li>
+                                      
+                                </div>
+                            )
+                        })}
+                            </ul>
+
+                        </div>
+                    }
+
+
+                </div>
+
+            </div>
+
+
+            {/* navbar finished */}
+
+
+            <div className="mx-auto max-w-screen-xl grid md:flex justify-between items-center">
+
+                <div className='w-[90%] sm:w-[33%] '>
+                    <h3 className="text-yellow-600 uppercase font-semibold">Look Stylish Be Stylish.</h3>
+
+                    <h1 className="capitalize font-bold text-7xl text-white leading-tight">
+                        Look Stylish <br />
+                        <span className='flex gap-4 items-center '>
+
+                            Be  <img src={twoStyle} alt="" className='h-[100%] sm:h-[86px] mt-6' />
+                        </span>
+                    </h1>
+                    <br />
+                    <p className="text-state-500 text-gray-400 leading-normal">Before starting this business you should have ideas about the market and products to Compete with the Existing Businesses.</p>
+                    <br />
+                    <div className="relative">
+                        <button className="bg-yellow-500 pt-2 pb-2 pr-7 pl-7 text-white rounded-md  capitalize">
+                            join shop
+                        </button>
+                        <img src={discount} alt="" className='w-[50%] absolute  sm:absolute top-0 left-[200px]' />
+
+                    </div>
+                </div>
+
+                <div className=" bg-[100%] sm:w-[60%] h-[350px] mt-5 sm:mt-0 sm:h-[600px] bg-contain bg-[url(./components/img/back.png)] bg-no-repeat   " >
+                    <img src={girl} alt="" className='h-[109.6%]' />
+                </div>
+            </div>
+
+
+        </header>
+    )
 }
