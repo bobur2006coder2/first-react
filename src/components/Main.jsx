@@ -38,17 +38,17 @@ export const Main = () => {
 
 
             <div className="max-w-screen-xl mx-auto pt-28 text-center ">
-                <>
+                < div className='w-[90%] sm:w-[40%] mx-auto'>
                     <h1 className="text-4xl text-black capitalize font-bold ">
                         our available product
                     </h1>
                     <br />
                     
                     <p className="capitalize text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor incididunt ut labore et dolore.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore.
                     </p>
 
-                </>
+                </div>
 
                 <div className="flex justify-center sm:justify-between flex-wrap ">
                     {imgs.map((value, index) => {

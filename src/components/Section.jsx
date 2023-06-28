@@ -23,8 +23,8 @@ export const Section = () => {
 
           <form action="" className='flex flex-wrap justify-center sm:justify-between sm:pt-8 gap-5'>
 
-            <input type="text" className="border border-solid w-[45%] sm:w-[250px] h-[35px] sm:h-[50px] p-1 border-gray-500 rounded-lg text-white outline-none bg-transparent" placeholder='Name' required />
-            <input type="email" className="border border-solid w-[45%] sm:w-[250px] h-[35px] sm:h-[50px] p-1 border-gray-500 rounded-lg text-white outline-none bg-transparent  sm:mt-0" placeholder='Email' required />
+            <input type="text" className="border border-solid w-[45%] sm:w-[250px] h-[40px] sm:h-[50px] p-2 border-gray-500 rounded-lg text-white outline-none bg-transparent" placeholder='Name' required />
+            <input type="email" className="border border-solid w-[45%] sm:w-[250px] h-[40px] sm:h-[50px] p-2 border-gray-500 rounded-lg text-white outline-none bg-transparent  sm:mt-0" placeholder='Email' required />
             <input type="text" className="border border-solid w-[100%] p-3 border-gray-500 rounded-lg mt-2 sm:mt-8 text-white outline-none bg-transparent sm:w-[100%]" placeholder='Address' required />
             <div className="flex items-center gap-7 mt-10">
 

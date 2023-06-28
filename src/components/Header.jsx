@@ -11,11 +11,11 @@ export const Header = () => {
   return (
     <nav >  
       <div className="max-w-screen-xl mx-auto">
-        <ul className="flex  sm:justify-around   sm:gap-5 pt-10">
+        <ul className="flex mx-auto  justify-around ml-6 sm:ml-0 pt-10">
           {forUL.map((val, index) => {
             return (
 
-              <li key={index} className={val.style}>{val.title}</li>
+              <li key={index} className={val.style}>{val.title}</li>  
 
             )
 

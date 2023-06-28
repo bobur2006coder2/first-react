@@ -12,7 +12,7 @@ export default function Navbar() {
         setName(e => !e)
     }
     return (
-        <header className='bg-stone-800 '>
+        <header className='bg-stone-800 overflow-hidden'>
 
             {/* navbar start */}
 
@@ -28,33 +28,36 @@ export default function Navbar() {
                                 <div key={index} className="flex items-center">
 
                                     <li className={val.style}>{val.name}</li>
-                                        <button className={val.btnstyle}>
-                                           {val.btnname}
-                                        </button>
+                                    <button className={val.btnstyle}>
+                                        {val.btnname}
+                                    </button>
                                 </div>
                             )
                         })}
                     </ul>
-                    <button className='capitalize bg-yellow-500 pl-4 pr-4 pt-2 pb-2 text-white rounded-md  md:hidden' onClick={headerNav}>
+                    <div className="sm:hidden  transition-all ease-in flex w-[30%] sm:w-[15px] flex-wrap">
+
+                    <button className='capitalize bg-yellow-500 w-[100%]  h-[35px] text-white rounded-md  md:hidden' onClick={headerNav}>
                         shop now
                     </button>
                     {
-                        name && <div className='block md:hidden w-full bg-white flex-wrap'>
+                        name && <div className=' sm:hidden w-[100%] mt-1'>
 
-                            <ul>
-                            {navbar.map((val, index) => {
-                            return (
-                                <div key={index} className="flex items-center">
+                            <ul className="">
+                                {navbar.map((val, index) => {
+                                    return (
 
-                                    <li className={val.style}>{val.name}</li>
-                                      
-                                </div>
-                            )
-                        })}
+
+                                        <li key={index} className={val.style}>{val.name}</li>
+
+                                    )
+                                })}
                             </ul>
 
                         </div>
                     }
+
+                    </div>
 
 
                 </div>
@@ -90,7 +93,7 @@ export default function Navbar() {
                 </div>
 
                 <div className=" bg-[100%] sm:w-[60%] h-[350px] mt-5 sm:mt-0 sm:h-[600px] bg-contain bg-[url(./components/img/back.png)] bg-no-repeat   " >
-                    <img src={girl} alt="" className='h-[109.6%]' />
+                    <img src={girl} alt="" className='h-[109.6%] ' />
                 </div>
             </div>
 

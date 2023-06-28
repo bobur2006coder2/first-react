@@ -53,12 +53,12 @@ export default function Footer() {
                             news latter
                         </h5>
                         <br />
-                        <div className=" flex sm:block">
+                        <div className=" flex gap-2  sm:block">
 
-                            <input type="email" className="border border-solid p-3 border-gray-500 rounded-lg text-white outline-none bg-transparent" placeholder='Enter Your Email' required />
+                            <input type="email" className="border border-solid p-2 w-[50%] sm:w-[100%] h-[35px] sm:p-6 border-gray-500 rounded-lg text-white outline-none bg-transparent" placeholder='Enter Your Email' required />
                             <br />
                             <br />
-                            <button className="bg-yellow-500 pt-2 pb-2 pr-7 pl-7 text-white rounded-md  capitalize">
+                            <button className="bg-yellow-500 w-[100px] sm:w-[150px] h-[35px] sm:h-[45px] text-white rounded-md  capitalize">
                                 subscribe
                             </button>
                         </div>
