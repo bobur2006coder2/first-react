@@ -10,9 +10,10 @@ export default function Navbar() {
     const [name, setName] = useState(false)
     const headerNav = () => {
         setName(e => !e)
+        
     }
     return (
-        <header className='bg-stone-800 overflow-hidden'>
+        <header className='bg-stone-800 overflow-hidden p-5 sm:p-0'>
 
             {/* navbar start */}
 
@@ -22,7 +23,7 @@ export default function Navbar() {
 
                     <img src={bag} alt="" />
 
-                    <ul className="hidden md:flex  gap-10 items-center  ">
+                    <ul className="hidden md:flex transition-all ease-in duration-500 gap-10 items-center  ">
                         {navbar.map((val, index) => {
                             return (
                                 <div key={index} className="flex items-center">
@@ -35,13 +36,13 @@ export default function Navbar() {
                             )
                         })}
                     </ul>
-                    <div className="sm:hidden  transition-all ease-in flex w-[30%] sm:w-[15px] flex-wrap">
+                    <div className="sm:hidden flex w-[30%] sm:w-[15px] flex-wrap">
 
                     <button className='capitalize bg-yellow-500 w-[100%]  h-[35px] text-white rounded-md  md:hidden' onClick={headerNav}>
                         shop now
                     </button>
                     {
-                        name && <div className=' sm:hidden w-[100%] mt-1'>
+                        name && <div className=' sm:hidden w-[100%] mt-1 '>
 
                             <ul className="">
                                 {navbar.map((val, index) => {
