@@ -13,7 +13,7 @@ export default function Navbar() {
         
     }
     return (
-        <header className='bg-stone-800 overflow-hidden p-5 sm:p-0'>
+        <header className='bg-stone-800 overflow-hidden p-5 pb-0 sm:p-0'>
 
             {/* navbar start */}
 
